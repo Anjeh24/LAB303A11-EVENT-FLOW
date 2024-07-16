@@ -4,13 +4,20 @@
 // Surround the initial function call in a try/catch block.
 // Within the catch, log the error and the value of the counter variable.
 
-n = 0;
+let n = 0;
 
+try {
 function theFunc(){
     for (let i = 0; i > 0; i++){
         n++;
     }
     theFunc();
     
+  }
 }
+catch(error){
+    console.log(error);
+    console.log(n.value);
+}
+
 console.log(theFunc());
