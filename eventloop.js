@@ -17,7 +17,7 @@ function theFunc(){
 }
 catch(error){
     console.log(error);
-    console.log(n.value);
+    console.log(n.valueOf()); //trying to obtain value of n
 }
 
 console.log(theFunc());
