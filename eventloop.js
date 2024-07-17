@@ -15,9 +15,35 @@ function theFunc(){
     
   }
 }
-catch(error){
-    console.log(error);
+catch(err){
+    console.log(err);
     console.log(n.valueOf()); //trying to obtain value of n
 }
 
-console.log(theFunc());
+//console.log(theFunc());
+
+//Part 2: Trampolines
+// Write a recursive function that completely flattens an array of nested arrays, regardless of how deeply nested the arrays are.
+// Once your recursive function is complete, trampoline it.
+
+let nestedArr = [[1, [4, 5], [6,7,[10, 11]]]];
+function makeFlat(){
+  nestedArr.flat();
+  //makeFlat();
+  return function subAr(){
+    const addnumtoarr = 12;
+   addnumtoarr.push(2);
+  }
+}
+console.log(nestedArr);
+
+console.log(makeFlat());
+
+let trampo = function finalTramp(x, y){
+  let reslt = f(nestedArr(), theFunc());
+  while (typeof reslt === "function"){
+    reslt = reslt();
+  }
+}
+
+console.log(trampo);
