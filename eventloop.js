@@ -47,3 +47,21 @@ let trampo = function finalTramp(x, y){
 }
 
 console.log(trampo);
+
+//Part 3: Deferred Execution
+
+// Create a simple HTML element to hold text. Cache this HTML element into a JavaScript variable.
+// Write a function that takes a parameter n and adds a list of all prime numbers between one and n to your HTML element.
+// Once complete, use the alert() method to alert the user that the calculation is finished.
+
+let para = document.createElement("p");
+function calPrime(n){
+    for (let i = 0; i < n; i++){
+        if (i/2 != 0){
+            para.appendChild(i);
+            alert('hey there, done calculating!');
+        }
+    }
+}
+calPrime(10);
+console.log(calPrime(10));
